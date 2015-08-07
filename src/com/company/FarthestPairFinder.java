@@ -6,10 +6,10 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class FarthestPairFinder extends JFrame {
-    int SCREEN_SIZE = 800;
+    int SCREEN_SIZE = 400;
     int HIGHEST = 200;
     int pointSize = 8;
-    int numPoints = 250;
+    int numPoints = 50;
     int SCALING_FACTOR = SCREEN_SIZE/HIGHEST;
     int bruteforce_counter = 0;
     int convexHullCounter = 0;
@@ -52,7 +52,7 @@ public class FarthestPairFinder extends JFrame {
             g.fillOval((int)(convexHull.get(i).x * SCALING_FACTOR - (pointSize / 2)), (int)(convexHull.get(i).y * SCALING_FACTOR - (pointSize / 2)), pointSize, pointSize);
         }
 
-        //brute force line
+      /*  //brute force line
         g.setColor(Color.red);
         g.drawLine((int)S[point1].x*SCALING_FACTOR,(int)S[point1].y*SCALING_FACTOR,(int)S[point2].x*SCALING_FACTOR,(int)S[point2].y*SCALING_FACTOR);
 
@@ -61,7 +61,7 @@ public class FarthestPairFinder extends JFrame {
         g.fillOval((int)(bounds[0].x * SCALING_FACTOR - (pointSize / 2)), (int)(bounds[0].y * SCALING_FACTOR - (pointSize / 2)), pointSize, pointSize);
         g.fillOval((int)(bounds[1].x * SCALING_FACTOR - (pointSize / 2)), (int)(bounds[1].y * SCALING_FACTOR - (pointSize / 2)), pointSize, pointSize);
         g.drawLine((int)farthest_pair[0].x*SCALING_FACTOR,(int)farthest_pair[0].y*SCALING_FACTOR,(int)farthest_pair[1].x*SCALING_FACTOR,(int)farthest_pair[1].y*SCALING_FACTOR);
-
+*/
         //draw convex hull
         g.setColor(Color.white);
         for (int i = 0; i < convexHull.size()-1; i++) {
